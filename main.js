@@ -1,3 +1,4 @@
+var port = process.env.PORT || 3000;
 var http = require('http'),
     url = require('url');
 http.createServer(function(cliReq, cliRes){
@@ -13,4 +14,4 @@ http.createServer(function(cliReq, cliRes){
 	svrReq.end();	
   });
   cliReq.pipe(svrReq);	
-}).listen(8080); 
+}).listen(port); 
